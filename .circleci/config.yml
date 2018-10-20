@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: circleci/node:8.11
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -34,7 +34,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: npm install -g serverless
+      - run: sudo npm install -g serverless
       - run: export AWS_ACCESS_KEY_ID=AKIAIRACRBTPZU7VBKMQ
       - run: export AWS_SECRET_ACCESS_KEY=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
       - run: serverless deploy
