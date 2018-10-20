@@ -35,8 +35,6 @@ jobs:
         
       # run tests!
       - run: sudo npm install -g serverless
-      - run: export AWS_ACCESS_KEY_ID=AKIAJ57AUXTINHI2YX5Q
-      - run: export AWS_SECRET_ACCESS_KEY=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
       - run: serverless deploy
 
 
