@@ -1,0 +1,18 @@
+service: serverless-with-webpack
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+custom:
+  babelPresets:
+    - latest
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+functions:
+  hello:
+    handler: handler.hello
